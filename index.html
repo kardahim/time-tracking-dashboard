@@ -1,80 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Paweł Ciszewski">
+  <link rel="stylesheet" href="/styles/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Time tracking dashboard</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <title>Time tracking dashboard</title>
 </head>
+
 <body>
-
-  Report for
-  Jeremy Robson
-
-  Daily
-  Weekly
-  Monthly
-
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
-
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <main class="cards">
+    <div class="card-container">
+      <!-- hero card -->
+      <div class="card-hero">
+        <div class="card-hero-top">
+          <!-- hero image -->
+          <div class="hero">
+            <img src="/images/image-jeremy.png" alt="hero">
+          </div>
+          <!-- name -->
+          <div class="name">
+            <div>Report for</div>
+            <div>Jeremy</div>
+            <div>Robson</div>
+          </div>
+        </div>
+        <div class="card-hero-bottom">
+          <div id="daily">Daily</div>
+          <div id="weekly">Weekly</div>
+          <div id="monthly">Monthly</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-container">
+      <!-- work card -->
+      <div class="card-regular" id="work">
+        <div class="card-regular-top">
+          <img src="/images/icon-work.svg" alt="work">
+        </div>
+        <div class="card-regular-bottom"></div>
+      </div>
+      <!-- exercise card -->
+      <div class="card-regular" id="exercise">
+        <div class="card-regular-top">
+          <img src="/images/icon-exercise.svg" alt="exercise">
+        </div>
+        <div class="card-regular-bottom"></div>
+      </div>
+    </div>
+    <div class="card-container">
+      <!-- play card -->
+      <div class="card-regular" id="play">
+        <div class="card-regular-top">
+          <img src="/images/icon-play.svg" alt="play">
+        </div>
+        <div class="card-regular-bottom"></div>
+      </div>
+      <!-- social card -->
+      <div class="card-regular" id="social">
+        <div class="card-regular-top">
+          <img src="/images/icon-social.svg" alt="social">
+        </div>
+        <div class="card-regular-bottom"></div>
+      </div>
+    </div>
+    <div class="card-container">
+      <!-- study card -->
+      <div class="card-regular" id="study">
+        <div class="card-regular-top">
+          <img src="/images/icon-study.svg" alt="study">
+        </div>
+        <div class="card-regular-bottom"></div>
+      </div>
+      <!-- self care -->
+      <div class="card-regular" id="selfcare">
+        <div class="card-regular-top">
+          <img src="/images/icon-self-care.svg" alt="selfcare">
+        </div>
+        <div class="card-regular-bottom"></div>
+      </div>
+    </div>
+  </main>
+  <footer class="attribution"></footer>
 </body>
+
 </html>
+
+<!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->

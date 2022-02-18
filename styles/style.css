@@ -1,0 +1,159 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #0f1424;
+  font-family: "Rubik", sans-serif;
+}
+
+.cards {
+  height: 95vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  overflow: hidden;
+}
+
+.cards .card-container {
+  width: 300px;
+  height: 525px;
+  margin-right: 25px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.cards .card-container .card-hero {
+  height: 100%;
+  background: #1c1f4a;
+}
+
+.cards .card-container .card-hero .card-hero-top {
+  background: #5847eb;
+  height: 66%;
+  padding: 30px;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+.cards .card-container .card-hero .card-hero-top .hero {
+  height: 80px;
+  margin-bottom: 30px;
+}
+
+.cards .card-container .card-hero .card-hero-top .hero img {
+  height: 100%;
+  border: 3px solid white;
+  border-radius: 100%;
+}
+
+.cards .card-container .card-hero .card-hero-top .name {
+  font-size: 35px;
+  font-weight: 300;
+}
+
+.cards .card-container .card-hero .card-hero-top .name div:nth-child(1) {
+  color: #bdc1ff;
+  font-size: 15px;
+}
+
+.cards .card-container .card-hero .card-hero-bottom {
+  height: 33%;
+  padding: 30px;
+}
+
+.cards .card-container .card-hero .card-hero-bottom div {
+  margin-bottom: 15px;
+}
+
+.cards .card-container .card-regular {
+  height: 250px;
+  margin-bottom: 25px;
+  border-radius: 18px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.cards .card-container .card-regular .card-regular-top {
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0 30px;
+  overflow: hidden;
+}
+
+.cards .card-container .card-regular .card-regular-top img {
+  height: 70px;
+}
+
+.cards .card-container .card-regular .card-regular-bottom {
+  height: 80%;
+  background: #1c1f4a;
+  border-radius: 18px;
+}
+
+.cards .card-container .card-regular:hover {
+  cursor: pointer;
+}
+
+.cards .card-container .card-regular:hover .card-regular-bottom {
+  background-color: #34397B;
+}
+
+.cards .card-container .card-regular:nth-child(2) {
+  margin-bottom: 0;
+}
+
+.cards .card-container #work {
+  background-color: #ff8c66;
+}
+
+.cards .card-container #play {
+  background-color: #56c2e6;
+}
+
+.cards .card-container #study {
+  background-color: #ff5c7c;
+}
+
+.cards .card-container #exercise {
+  background-color: #4acf81;
+}
+
+.cards .card-container #social {
+  background-color: #7536d3;
+}
+
+.cards .card-container #social img {
+  height: 110px;
+  -o-object-position: 0 -15px;
+     object-position: 0 -15px;
+}
+
+.cards .card-container #selfcare {
+  background-color: #f1c65b;
+}
+
+.cards .card-container #selfcare img {
+  -o-object-position: 0 -10px;
+     object-position: 0 -10px;
+}
+
+.cards .card-container:nth-child(4) {
+  margin-right: 0;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,199 @@
+// card backgrounds
+$card-hero-background: hsl(246, 80%, 60%);
+$card-work-background: hsl(15, 100%, 70%);
+$card-play-background: hsl(195, 74%, 62%);
+$card-study-background: hsl(348, 100%, 68%);
+$card-exercise-background: hsl(145, 58%, 55%);
+$card-social-background: hsl(264, 64%, 52%);
+$card-selfcare-background: hsl(43, 84%, 65%);
+$card-background: hsl(235, 46%, 20%);
+
+// body bacgrounds
+$body-background: hsl(226, 43%, 10%);
+
+// font colors
+$font-color: hsl(236, 100%, 87%);
+$font-tab-color: hsl(235, 45%, 61%);
+
+// fonts
+$main-ff: 'Rubik', sans-serif;
+
+// font sizes
+$cardtitle-size: 18px;
+$primary-size: 35px;
+$secondery-size: 15px;
+
+// font weights
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+
+// details
+$card-padding: 30px;
+$card-radius: 18px;
+$card-gap: 25px;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: $body-background;
+    font-family: $main-ff;
+}
+
+
+.cards {
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+
+   .card-container {
+       width: 300px;
+       height: 525px;
+       margin-right: $card-gap;
+       border-radius: $card-radius;
+       overflow: hidden;
+
+       .card-hero {
+           height: 100%;
+           background: $card-background;
+
+           .card-hero-top {
+               background: $card-hero-background;
+               height: 66%;
+               padding: $card-padding;
+               border-bottom-left-radius: $card-radius;
+               border-bottom-right-radius: $card-radius;
+
+               .hero {
+                   height: 80px;
+                   margin-bottom: 30px;
+
+                   img {
+                       height: 100%;
+                       border: 3px solid white;
+                       border-radius: 100%;
+                   }
+               }
+
+               .name {
+                    font-size: $primary-size;
+                    font-weight: $font-light;
+
+                   div:nth-child(1) {
+                       color: $font-color;
+                       font-size: $secondery-size;
+                   }
+               }
+           }
+
+           .card-hero-bottom {
+               height: 33%;
+               padding: $card-padding;
+
+               div {
+                   margin-bottom: 15px;
+               }
+           }
+       }
+
+       .card-regular {
+           height: 250px;
+           margin-bottom: $card-gap;
+           border-radius: $card-radius;
+        //   this is a very bad solution to the problem but it works
+           border-bottom-left-radius: 30px;
+           border-bottom-right-radius: 30px;
+
+           .card-regular-top {
+               height: 20%;
+               display: flex;
+               justify-content: flex-end;
+               padding: 0 $card-padding;
+               overflow: hidden;
+
+               img {
+                   height: 70px;
+               }
+           }
+
+           .card-regular-bottom {
+               height: 80%;
+               background: $card-background;
+               border-radius: $card-radius;
+           }
+       }
+
+       .card-regular:hover {
+        cursor: pointer;
+           .card-regular-bottom {
+               background-color: #34397B;
+           }
+       }
+
+       .card-regular:nth-child(2) {
+        margin-bottom: 0;
+    }
+
+       #work {
+           background-color: $card-work-background;
+       }
+
+       #play {
+            background-color: $card-play-background;
+        }
+
+        #study {
+            background-color: $card-study-background;
+        }
+
+        #exercise {
+            background-color: $card-exercise-background;
+        }
+
+        #social {
+            background-color: $card-social-background;
+
+            img {
+                height: 110px;
+                object-position: 0 -15px;
+            }
+        }
+
+        #selfcare {
+            background-color: $card-selfcare-background;
+
+            img {
+                object-position: 0 -10px;
+            }
+        }
+   }
+
+   .card-container:nth-child(4) {
+        margin-right: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+// .attribution {
+//     font-size: 11px;
+//     text-align: center;
+//   }
+
+// .attribution a {
+//     color: hsl(228, 45%, 44%);
+// }
