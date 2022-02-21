@@ -96,9 +96,18 @@ body {
            .card-hero-bottom {
                height: 33%;
                padding: $card-padding;
+               font-size: 17px;
+               font-weight: $font-light;
 
                div {
-                   margin-bottom: 15px;
+                   margin-bottom: 20px;
+                   width: 60px;
+                   color: $font-color;
+               }
+
+               div:hover {
+                   cursor: pointer;
+                   color: white;
                }
            }
        }
@@ -108,8 +117,8 @@ body {
            margin-bottom: $card-gap;
            border-radius: $card-radius;
         //   this is a very bad solution to the problem but it works
-           border-bottom-left-radius: 30px;
-           border-bottom-right-radius: 30px;
+           border-bottom-left-radius: calc(10px + #{$card-radius});
+           border-bottom-right-radius: calc(10px + #{$card-radius});
 
            .card-regular-top {
                height: 20%;
@@ -127,6 +136,30 @@ body {
                height: 80%;
                background: $card-background;
                border-radius: $card-radius;
+               padding: $card-padding;
+
+               .activity-name {
+                   display: flex;
+                   justify-content: space-between;
+
+                   .activity-title {
+                       font-size: $font-regular;
+                       font-size: $cardtitle-size;
+                       font-weight: $font-medium;
+                   }
+               }
+
+               .activity-time {
+                   font-size: calc(#{$primary-size} + 15px);
+                   font-weight: $font-light;
+                   margin-top: 25px;
+               }
+
+               .activity-past {
+                   margin-top: 20px;
+                   color: $font-color;
+                   font-size: $secondery-size;
+               }
            }
        }
 
@@ -160,17 +193,21 @@ body {
         #social {
             background-color: $card-social-background;
 
-            img {
-                height: 110px;
-                object-position: 0 -15px;
+            .card-regular-top {
+                img {
+                    height: 110px;
+                    object-position: 0 -15px;
+                }
             }
         }
 
         #selfcare {
             background-color: $card-selfcare-background;
 
-            img {
-                object-position: 0 -10px;
+            .card-regular-top {
+                img {
+                    object-position: 0 -10px;
+                }
             }
         }
    }

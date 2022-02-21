@@ -70,18 +70,27 @@ body {
 .cards .card-container .card-hero .card-hero-bottom {
   height: 33%;
   padding: 30px;
+  font-size: 17px;
+  font-weight: 300;
 }
 
 .cards .card-container .card-hero .card-hero-bottom div {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  width: 60px;
+  color: #bdc1ff;
+}
+
+.cards .card-container .card-hero .card-hero-bottom div:hover {
+  cursor: pointer;
+  color: white;
 }
 
 .cards .card-container .card-regular {
   height: 250px;
   margin-bottom: 25px;
   border-radius: 18px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: calc(10px + 18px);
+  border-bottom-right-radius: calc(10px + 18px);
 }
 
 .cards .card-container .card-regular .card-regular-top {
@@ -104,6 +113,34 @@ body {
   height: 80%;
   background: #1c1f4a;
   border-radius: 18px;
+  padding: 30px;
+}
+
+.cards .card-container .card-regular .card-regular-bottom .activity-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cards .card-container .card-regular .card-regular-bottom .activity-name .activity-title {
+  font-size: 400;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.cards .card-container .card-regular .card-regular-bottom .activity-time {
+  font-size: calc(35px + 15px);
+  font-weight: 300;
+  margin-top: 25px;
+}
+
+.cards .card-container .card-regular .card-regular-bottom .activity-past {
+  margin-top: 20px;
+  color: #bdc1ff;
+  font-size: 15px;
 }
 
 .cards .card-container .card-regular:hover {
@@ -138,7 +175,7 @@ body {
   background-color: #7536d3;
 }
 
-.cards .card-container #social img {
+.cards .card-container #social .card-regular-top img {
   height: 110px;
   -o-object-position: 0 -15px;
      object-position: 0 -15px;
@@ -148,7 +185,7 @@ body {
   background-color: #f1c65b;
 }
 
-.cards .card-container #selfcare img {
+.cards .card-container #selfcare .card-regular-top img {
   -o-object-position: 0 -10px;
      object-position: 0 -10px;
 }
