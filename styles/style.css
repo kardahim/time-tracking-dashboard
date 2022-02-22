@@ -100,6 +100,7 @@ body {
 
 .cards .card-container .card-hero .card-hero-top .hero {
   height: 80px;
+  margin-bottom: 10px;
 }
 
 .cards .card-container .card-hero .card-hero-top .hero img {
