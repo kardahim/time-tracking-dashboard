@@ -225,7 +225,7 @@ body {
 }
 
 .cards .card-container .card-regular .card-regular-bottom .activity-name .activity-title {
-  font-size: 400;
+  font-weight: 400;
   font-size: 18px;
   font-weight: 500;
 }
