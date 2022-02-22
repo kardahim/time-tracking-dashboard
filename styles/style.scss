@@ -21,7 +21,7 @@ $main-ff: 'Rubik', sans-serif;
 // font sizes
 $cardtitle-size: 18px;
 $primary-size: 35px;
-$secondery-size: 15px;
+$secondary-size: 15px;
 
 // font weights
 $font-light: 300;
@@ -33,6 +33,32 @@ $card-padding: 30px;
 $card-radius: 18px;
 $card-gap: 25px;
 
+// display sizes
+@mixin laptop-m {
+    @media only screen and (max-width: 1300px) {
+        @content;
+    }
+}
+
+@mixin laptop-s {
+    @media only screen and (max-width: 1150px) {
+        @content;
+    }
+}
+
+// mobile
+@mixin tablet {
+    @media only screen and (max-width: 1023px) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media only screen and (max-width: 425px) {
+        @content;
+    }
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -42,16 +68,28 @@ $card-gap: 25px;
 body {
     background: $body-background;
     font-family: $main-ff;
+    position: relative;
 }
 
 
 .cards {
-    height: 95vh;
+    min-height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     overflow: hidden;
+
+    @include tablet {
+        flex-direction: column;
+
+        .card-container:nth-child(1) {
+            @include tablet {
+                height: 200px;
+                margin-top: $card-gap;
+            }
+        }
+    }
 
    .card-container {
        width: 300px;
@@ -59,6 +97,22 @@ body {
        margin-right: $card-gap;
        border-radius: $card-radius;
        overflow: hidden;
+
+       @include laptop-m {
+           width: 250px;
+       }
+
+       @include laptop-s {
+            width: 230px;
+        }
+
+        @include tablet {
+            width: calc(100% - #{$card-gap * 2});
+            margin-right: 0;
+            display: flex;
+            flex-direction: column;
+            height: calc(500px + #{2 * $card-gap} - 100px);
+        }
 
        .card-hero {
            height: 100%;
@@ -71,9 +125,12 @@ body {
                border-bottom-left-radius: $card-radius;
                border-bottom-right-radius: $card-radius;
 
+               @include tablet {
+                    display: flex;
+                }
+
                .hero {
                    height: 80px;
-                   margin-bottom: 30px;
 
                    img {
                        height: 100%;
@@ -83,12 +140,29 @@ body {
                }
 
                .name {
-                    font-size: $primary-size;
+                    font-size: $secondary-size;
                     font-weight: $font-light;
+                    color: $font-color;
 
-                   div:nth-child(1) {
-                       color: $font-color;
-                       font-size: $secondery-size;
+                    @include tablet {
+                        margin-left: 20px;
+                    }
+
+                   .first-last {
+                       color: white;
+                       font-size: $primary-size;
+
+                       @include tablet {
+                            display: flex;
+                            
+                            div {
+                                margin-right: 10px;
+                            }
+                        }
+
+                        @include phone {
+                            font-size: calc(#{$primary-size} - 10px);
+                        }
                    }
                }
            }
@@ -99,15 +173,24 @@ body {
                font-size: 17px;
                font-weight: $font-light;
 
+               @include tablet {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
                div {
                    margin-bottom: 20px;
                    width: 60px;
                    color: $font-color;
+
+                   @include tablet {
+                       width: auto;
+                   }
                }
 
                div:hover {
                    cursor: pointer;
-                   color: white;
+                   color: white !important;
                }
            }
        }
@@ -116,9 +199,13 @@ body {
            height: 250px;
            margin-bottom: $card-gap;
            border-radius: $card-radius;
-        //   this is a very bad solution to the problem but it works
            border-bottom-left-radius: calc(10px + #{$card-radius});
            border-bottom-right-radius: calc(10px + #{$card-radius});
+
+           @include tablet {
+            margin-bottom: 0;
+            height: 200px;
+           }
 
            .card-regular-top {
                height: 20%;
@@ -153,26 +240,44 @@ body {
                    font-size: calc(#{$primary-size} + 15px);
                    font-weight: $font-light;
                    margin-top: 25px;
+
+                   @include phone {
+                        font-size: calc(#{$primary-size} - 5px);
+                    }
                }
 
                .activity-past {
                    margin-top: 20px;
                    color: $font-color;
-                   font-size: $secondery-size;
+                   font-size: $secondary-size;
+               }
+
+               .time {
+                   @include tablet {
+                       display: flex;
+                       justify-content: space-between;
+                       align-items: center;
+                   }
                }
            }
        }
 
        .card-regular:hover {
-        cursor: pointer;
+            cursor: pointer;
            .card-regular-bottom {
                background-color: #34397B;
            }
        }
 
        .card-regular:nth-child(2) {
-        margin-bottom: 0;
-    }
+            margin-bottom: 0;
+        }
+
+        .card-regular:nth-child(1) {
+            @include tablet {
+                margin: $card-gap 0;
+            }
+        }
 
        #work {
            background-color: $card-work-background;
@@ -214,23 +319,21 @@ body {
 
    .card-container:nth-child(4) {
         margin-right: 0;
+
+        @include tablet {
+            margin-bottom: $card-gap;
+        }
     }
 }
 
+.attribution {
+    font-size: $cardtitle-size;
+    text-align: center;
+    color: $card-play-background;
+    position: absolute;
+    width: 100%;
 
-
-
-
-
-
-
-
-
-// .attribution {
-//     font-size: 11px;
-//     text-align: center;
-//   }
-
-// .attribution a {
-//     color: hsl(228, 45%, 44%);
-// }
+    a {
+        color: $card-social-background;
+    }
+}

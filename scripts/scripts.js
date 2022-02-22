@@ -141,89 +141,89 @@ function messages(mode) {
     work[0].innerHTML = data[0].title;
     if (mode == 1) {
         work[1].innerHTML = data[0].timeframes.daily.current + "hrs";
-        work[2].innerHTML = 'Last week - ' + data[0].timeframes.daily.previous + 'hrs';
+        work[2].innerHTML = 'Last Day - ' + data[0].timeframes.daily.previous + 'hrs';
     }
     else if (mode == 2) {
         work[1].innerHTML = data[0].timeframes.weekly.current + "hrs";
-        work[2].innerHTML = 'Last week - ' + data[0].timeframes.weekly.previous + 'hrs';
+        work[2].innerHTML = 'Last Week - ' + data[0].timeframes.weekly.previous + 'hrs';
     }
     else if (mode == 3) {
         work[1].innerHTML = data[0].timeframes.monthly.current + "hrs";
-        work[2].innerHTML = 'Last week - ' + data[0].timeframes.monthly.previous + 'hrs';
+        work[2].innerHTML = 'Last Month - ' + data[0].timeframes.monthly.previous + 'hrs';
     }
 
     // play
     play[0].innerHTML = data[1].title;
     if (mode == 1) {
         play[1].innerHTML = data[1].timeframes.daily.current + "hrs";
-        play[2].innerHTML = 'Last week - ' + data[1].timeframes.daily.previous + 'hrs';
+        play[2].innerHTML = 'Last Day - ' + data[1].timeframes.daily.previous + 'hrs';
     }
     else if (mode == 2) {
         play[1].innerHTML = data[1].timeframes.weekly.current + "hrs";
-        play[2].innerHTML = 'Last week - ' + data[1].timeframes.weekly.previous + 'hrs';
+        play[2].innerHTML = 'Last Week - ' + data[1].timeframes.weekly.previous + 'hrs';
     }
     else if (mode == 3) {
         play[1].innerHTML = data[1].timeframes.monthly.current + "hrs";
-        play[2].innerHTML = 'Last week - ' + data[1].timeframes.monthly.previous + 'hrs';
+        play[2].innerHTML = 'Last Month - ' + data[1].timeframes.monthly.previous + 'hrs';
     }
 
     // study
     study[0].innerHTML = data[2].title;
     if (mode == 1) {
         study[1].innerHTML = data[2].timeframes.daily.current + "hrs";
-        study[2].innerHTML = 'Last week - ' + data[2].timeframes.daily.previous + 'hrs';
+        study[2].innerHTML = 'Last Day - ' + data[2].timeframes.daily.previous + 'hrs';
     }
     else if (mode == 2) {
         study[1].innerHTML = data[2].timeframes.weekly.current + "hrs";
-        study[2].innerHTML = 'Last week - ' + data[2].timeframes.weekly.previous + 'hrs';
+        study[2].innerHTML = 'Last Week - ' + data[2].timeframes.weekly.previous + 'hrs';
     }
     else if (mode == 3) {
         study[1].innerHTML = data[2].timeframes.monthly.current + "hrs";
-        study[2].innerHTML = 'Last week - ' + data[2].timeframes.monthly.previous + 'hrs';
+        study[2].innerHTML = 'Last Month - ' + data[2].timeframes.monthly.previous + 'hrs';
     }
 
     // social
     social[0].innerHTML = data[4].title;
     if (mode == 1) {
         social[1].innerHTML = data[4].timeframes.daily.current + "hrs";
-        social[2].innerHTML = 'Last week - ' + data[4].timeframes.daily.previous + 'hrs';
+        social[2].innerHTML = 'Last Day - ' + data[4].timeframes.daily.previous + 'hrs';
     }
     else if (mode == 2) {
         social[1].innerHTML = data[4].timeframes.weekly.current + "hrs";
-        social[2].innerHTML = 'Last week - ' + data[4].timeframes.weekly.previous + 'hrs';
+        social[2].innerHTML = 'Last Week - ' + data[4].timeframes.weekly.previous + 'hrs';
     }
     else if (mode == 3) {
         social[1].innerHTML = data[4].timeframes.monthly.current + "hrs";
-        social[2].innerHTML = 'Last week - ' + data[4].timeframes.monthly.previous + 'hrs';
+        social[2].innerHTML = 'Last Month - ' + data[4].timeframes.monthly.previous + 'hrs';
     }
 
     // exercise
     exercise[0].innerHTML = data[3].title;
     if (mode == 1) {
         exercise[1].innerHTML = data[3].timeframes.daily.current + "hrs";
-        exercise[2].innerHTML = 'Last week - ' + data[3].timeframes.daily.previous + 'hrs';
+        exercise[2].innerHTML = 'Last Day - ' + data[3].timeframes.daily.previous + 'hrs';
     }
     else if (mode == 2) {
         exercise[1].innerHTML = data[3].timeframes.weekly.current + "hrs";
-        exercise[2].innerHTML = 'Last week - ' + data[3].timeframes.weekly.previous + 'hrs';
+        exercise[2].innerHTML = 'Last Week - ' + data[3].timeframes.weekly.previous + 'hrs';
     }
     else if (mode == 3) {
         exercise[1].innerHTML = data[3].timeframes.monthly.current + "hrs";
-        exercise[2].innerHTML = 'Last week - ' + data[3].timeframes.monthly.previous + 'hrs';
+        exercise[2].innerHTML = 'Last Month - ' + data[3].timeframes.monthly.previous + 'hrs';
     }
 
     // selfcare
     selfcare[0].innerHTML = data[5].title;
     if (mode == 1) {
         selfcare[1].innerHTML = data[5].timeframes.daily.current + "hrs";
-        selfcare[2].innerHTML = 'Last week - ' + data[5].timeframes.daily.previous + 'hrs';
+        selfcare[2].innerHTML = 'Last Day - ' + data[5].timeframes.daily.previous + 'hrs';
     }
     else if (mode == 2) {
         selfcare[1].innerHTML = data[5].timeframes.weekly.current + "hrs";
-        selfcare[2].innerHTML = 'Last week - ' + data[5].timeframes.weekly.previous + 'hrs';
+        selfcare[2].innerHTML = 'Last Week - ' + data[5].timeframes.weekly.previous + 'hrs';
     }
     else if (mode == 3) {
         selfcare[1].innerHTML = data[5].timeframes.monthly.current + "hrs";
-        selfcare[2].innerHTML = 'Last week - ' + data[5].timeframes.monthly.previous + 'hrs';
+        selfcare[2].innerHTML = 'Last Month - ' + data[5].timeframes.monthly.previous + 'hrs';
     }
 }
